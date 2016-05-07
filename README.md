@@ -1,5 +1,5 @@
 # Android_Demo
-<i>This is my demo repository where I upload my Android work for education. This is not project.<i> </br>
+<i>This is my demo repository where I upload my Android work for education. This is not project.</i> </br>
 
 <b>Folders</b> </br>
 1.Android Text(Java) - Contain text files that says how to work </br>
