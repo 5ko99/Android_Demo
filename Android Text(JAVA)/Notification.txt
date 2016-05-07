@@ -1,0 +1,11 @@
+ private void sendNotification() {
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(mContext);
+        mBuilder.setContentTitle("Notification Title");
+        mBuilder.setSmallIcon(R.drawable.icon);
+        mBuilder.setContentText("Text");
+
+        Notification notification = mBuilder.build();
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.notify(123,notification);
+    }

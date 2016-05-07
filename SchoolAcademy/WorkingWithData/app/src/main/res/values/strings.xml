@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WorkingWithData</string>
+    <string name="action_settings">Settings</string>
+    <string name="username">petko</string>
+</resources>

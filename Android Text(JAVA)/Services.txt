@@ -1,0 +1,13 @@
+startServices(Intent intent) стартиране на services
+
+Създаване на services правин new Package services -> new Services -> Services
+Можем да overrid onStartCommand onDestroy и в тези методи вършим някакво действие 
+На onStartCommand трябва да ретурнем Int примерен такъв е 
+return START_STICKY
+
+в Main метода за да стартираме services правим интент
+Intent serviceIntent = new Intent(this,MySerice.class)
+така слагаме на интента този сървис и вече можем  да извикаме за този сървис(интент)
+startService(serviceIntent)
+или
+stopService(serviceIntent)

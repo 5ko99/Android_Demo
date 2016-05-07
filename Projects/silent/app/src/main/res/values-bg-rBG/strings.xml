@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">"Тих Бутон"</string>
+    <string name="action_settings">"Настройки"</string>
+    <string name="Main_Button_Text">"Превключване към тих режим"</string>
+</resources>

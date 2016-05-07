@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Бройни Системи</string>
+    <string name="toDecimal">Към Десетична</string>
+    <string name="toBInar">Към Двоична</string>
+    <string name="errorMessage">Въвеждайте само 0 и 1 когато превръщата към десетична!</string>
+</resources>

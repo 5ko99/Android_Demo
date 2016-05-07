@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TelerikBeckend</string>
+    <string name="action_settings">Settings</string>
+    <string name="btnText">Create Entry</string>
+</resources>

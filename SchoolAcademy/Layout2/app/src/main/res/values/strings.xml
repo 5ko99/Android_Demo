@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Layout2</string>
+    <string name="title_activity_details">DetailsActivity</string>
+
+    <string-array name="planets">
+        <item>Mercury</item>
+        <item>Earth</item>
+        <item>Mar</item>
+        <item>Earth</item>
+        <item>Moon</item>
+        <item>Saturn</item>
+    </string-array>
+</resources>

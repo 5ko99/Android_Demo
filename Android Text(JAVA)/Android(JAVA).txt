@@ -1,0 +1,6 @@
+private static final String LOG_TAG = MainActivity.class.getSimpleName();
+Правим си такава променлива и като логваме
+ log.v(LOG_TAG,"Hello!");
+ 
+В device monitor
+ pid: и пишем номера на приложението ни и така виждаме само нашето приложение

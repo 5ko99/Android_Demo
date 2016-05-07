@@ -1,0 +1,29 @@
+Прави се папка drawable-mdpi в папката rec и там се поставят картинките след това се достъпват по този начин чрез xml а чрез java се достъпват така R.drawable.phone_on
+android:src="@drawable/phone_on" достъп на елемнтите от папката drawable в папаката rec достъп до картинката phone_on
+
+<CheckBox
+        android:id="@+id/checkbox_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check 3"
+        android:onClick="chechkBoxClicked"/>
+
+<EditText
+        android:id="@+id/input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+<Button
+        android:id="@+id/main_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:onClick="buttonClick"
+        android:text="@string/click"
+        />
+
+OnClick задава метод за изпълнение при клик трябва да го напишем този метод в MainActivity.java
+textView.setPadding(p,0,p,0); Добавяне на падинг към layout
+
+View Елемент с UI

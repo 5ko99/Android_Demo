@@ -1,0 +1,14 @@
+Servicices
+ -Async opeations
+  -Operations that take time
+  
+  2)Fragments
+   -Reusable and Flexible UI
+   
+   3)Local Data
+    -SQLite
+	-SharedPreferences
+	
+	4)Gestures
+	
+	Shared Preferences

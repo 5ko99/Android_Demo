@@ -1,0 +1,72 @@
+https://www.youtube.com/watch?v=ZPvnpNxNT6c
+http://docs.telerik.com/platform/backend-services/android/getting-started-android-sdk
+
+
+
+1.В конзолата след като добавим androidsdk.jar от папката programs/libs пишем 
+gradle build
+
+2.В Gradle Script build.gradle (вророто отгоре да пише app)
+в скобите на andrid{} поставяме това
+
+lintOptions {
+            abortOnError false
+        }
+И пишем пак gradle build
+
+3.Правим си метод който го извикваме в onCrate() и прави
+
+private void initializeSDK() {
+        EverliveAppSettings everliveAppSettings = new EverliveAppSettings();
+        everliveAppSettings.setAppId(APP_ID);
+        everliveAppSettings.setUseHttps(true);
+
+       myApp = new EverliveApp(everliveAppSettings);
+    }
+
+app-id от сайта на направеното приложение от settings
+
+II.Правене на заявки
+
+Правим клас CommonTable и вътре пишем
+
+@ServerType("SampleDB") //Име на базата данни към която искаме да свържем от сайта на телерик
+public class CommonTable extends DataItem {
+    @ServerProperty("Name") //Име на полето
+    private String name; //Поле от същия тип
+
+    public String getName() { //Гетар на полето
+        return name;
+    }
+
+    public void setName(String name) { //сетар на полето
+        this.name = name;
+    }
+
+
+}
+
+ В манифеста добаавяме правото за интернет
+<uses-permission android:name="android.permission.INTERNET"></uses-permission> 
+
+Правим метод който да взима информацията
+
+ private void getAllObjects() {
+        myApp.workWith().data(CommonTable.class).getAll().executeAsync(new RequestResultCallbackAction<ArrayList<CommonTable>>() {
+            @Override
+            public void invoke(RequestResult<ArrayList<CommonTable>> requestResult) {
+                if(requestResult.getSuccess()){
+                    for (CommonTable res  : requestResult.getValue()) {
+                        System.out.println("--------Success: "+res.getName()); /от res.get можем да вземем всички полета от таблицата
+                    }
+
+                }else{
+                    System.out.println("--------Error: "+requestResult.getError().toString());
+                }
+            }
+        });
+    }
+
+Записване на информация
+
+
