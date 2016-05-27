@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onCreateDB">create table preferences (_id integer primary key autoincrement, val text not null);</string>
+</resources>

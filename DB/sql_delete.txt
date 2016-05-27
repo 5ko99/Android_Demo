@@ -1,0 +1,6 @@
+it's better to use whereargs too;
+
+db.delete("tablename","id=? and name=?",new String[]{"1","jack"});
+this is like useing this command:
+
+delete from tablename where id='1' and name ='jack'
