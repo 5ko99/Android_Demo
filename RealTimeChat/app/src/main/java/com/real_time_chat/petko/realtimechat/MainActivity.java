@@ -1,7 +1,9 @@
 package com.real_time_chat.petko.realtimechat;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -104,12 +106,22 @@ public class MainActivity extends AppCompatActivity {
         builder.setTitle("Enter name:");
 
         final EditText input_field = new EditText(this);
+
+        //Get name
+        final SharedPreferences sharedPref = getApplicationContext().getSharedPreferences(getString(R.string.shared_pref_usr_name),0);
+        String saved_usr_name = sharedPref.getString(getString(R.string.shared_pref_usr_name),"");
+        input_field.setText(saved_usr_name);
+
         builder.setView(input_field);
 
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 name=input_field.getText().toString();
+                //Save name
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString(getString(R.string.shared_pref_usr_name), input_field.getText().toString());
+                editor.commit();
             }
         });
 
@@ -120,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
                 request_user_name();
             }
         });
+
 
         builder.show();
 
